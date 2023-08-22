@@ -5,6 +5,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int decide(va_list variable, char c);
 void print_int(int n);
 void print_unsigned(unsigned int n);
 void print_hex(unsigned int n, int upper);

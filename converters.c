@@ -47,15 +47,16 @@ void print_hex(unsigned int n, int upper)
 }
 
 /**
- *print_unsigned-
+ *print_unsigned- converts char to unsigned int
  *
+ *@n: integer parameter
  *Return: Nothing
  */
 void print_unsigned(unsigned int n)
 {
-	if (n > 9) 
+	if (n > 9)
 		print_unsigned(n / 10);
-	
+
 	_putchar((n % 10) + '0');
 }
 
