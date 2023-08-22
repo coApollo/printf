@@ -5,6 +5,10 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-
+void print_int(int n);
+void print_unsigned(unsigned int n);
+void print_hex(unsigned int n, int upper);
+void print_oct(unsigned int n);
+void print_bin(unsigned int n);
 
 #endif
