@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdarg.h>
 #include "main.h"
 /**
@@ -12,7 +11,8 @@ int _printf(const char *format, ...)
 {
 	const char *next;
 	va_list variable;
-
+	/*int x;*/
+	/*void *p;*/
 	va_start(variable, format);
 
 	for (next = format; *next != '\0'; next++)
@@ -44,12 +44,21 @@ int _printf(const char *format, ...)
 		case 'o':
 			print_oct(va_arg(variable, unsigned int));
 			break;
-		case 'x':
+	/*	case 'x':
 			print_hex(va_arg(variable, unsigned int), 0);
 			break;
 		case 'X':
 			print_hex(va_arg(variable, unsigned int), 1);
+			break;*/
+		case 'x':
+		case 'X':
+			printf("%x", va_arg(variable, int));
+			/*printf("%x", x);*/
 			break;
+		case 'p':
+			printf("%p", va_arg(variable, void*));
+                        /*printf("%p", p);*/
+                        break;
 		default:
 			_putchar(*next);
 		}
