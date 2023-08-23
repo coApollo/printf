@@ -47,7 +47,7 @@ int decide(va_list variable, char c)
 		_putchar(va_arg(variable, int));
 		break;
 	case 's':
-		puts(va_arg(variable, char*));
+		_puts(va_arg(variable, char*));
 		break;
 	case '%':
 		_putchar('%');
