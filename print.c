@@ -49,6 +49,9 @@ int decide(va_list variable, char c)
 	case 's':
 		puts(va_arg(variable, char*));
 		break;
+	case '%':
+		_putchar('%');
+		break;
 	case 'i':
 	case 'd':
 		print_int(va_arg(variable, int));
